@@ -1,0 +1,207 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\FULL STACK PROJECTS\\FavMovie\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FA3B925D-73BC-4847-9CF6-52718017CC85}|back-end\\back-end.csproj|d:\\full stack projects\\favmovie\\back-end\\controller\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA3B925D-73BC-4847-9CF6-52718017CC85}|back-end\\back-end.csproj|solutionrelative:back-end\\controller\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA3B925D-73BC-4847-9CF6-52718017CC85}|back-end\\back-end.csproj|d:\\full stack projects\\favmovie\\back-end\\controller\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA3B925D-73BC-4847-9CF6-52718017CC85}|back-end\\back-end.csproj|solutionrelative:back-end\\controller\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA3B925D-73BC-4847-9CF6-52718017CC85}|back-end\\back-end.csproj|d:\\full stack projects\\favmovie\\back-end\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA3B925D-73BC-4847-9CF6-52718017CC85}|back-end\\back-end.csproj|solutionrelative:back-end\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA3B925D-73BC-4847-9CF6-52718017CC85}|back-end\\back-end.csproj|d:\\full stack projects\\favmovie\\back-end\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA3B925D-73BC-4847-9CF6-52718017CC85}|back-end\\back-end.csproj|solutionrelative:back-end\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA3B925D-73BC-4847-9CF6-52718017CC85}|back-end\\back-end.csproj|d:\\full stack projects\\favmovie\\back-end\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FA3B925D-73BC-4847-9CF6-52718017CC85}|back-end\\back-end.csproj|solutionrelative:back-end\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA3B925D-73BC-4847-9CF6-52718017CC85}|back-end\\back-end.csproj|d:\\full stack projects\\favmovie\\back-end\\dtos\\favmovidto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA3B925D-73BC-4847-9CF6-52718017CC85}|back-end\\back-end.csproj|solutionrelative:back-end\\dtos\\favmovidto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA3B925D-73BC-4847-9CF6-52718017CC85}|back-end\\back-end.csproj|d:\\full stack projects\\favmovie\\back-end\\data\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA3B925D-73BC-4847-9CF6-52718017CC85}|back-end\\back-end.csproj|solutionrelative:back-end\\data\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA3B925D-73BC-4847-9CF6-52718017CC85}|back-end\\back-end.csproj|d:\\full stack projects\\favmovie\\back-end\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA3B925D-73BC-4847-9CF6-52718017CC85}|back-end\\back-end.csproj|solutionrelative:back-end\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA3B925D-73BC-4847-9CF6-52718017CC85}|back-end\\back-end.csproj|d:\\full stack projects\\favmovie\\back-end\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA3B925D-73BC-4847-9CF6-52718017CC85}|back-end\\back-end.csproj|solutionrelative:back-end\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA3B925D-73BC-4847-9CF6-52718017CC85}|back-end\\back-end.csproj|d:\\full stack projects\\favmovie\\back-end\\back-end.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{FA3B925D-73BC-4847-9CF6-52718017CC85}|back-end\\back-end.csproj|solutionrelative:back-end\\back-end.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA3B925D-73BC-4847-9CF6-52718017CC85}|back-end\\back-end.csproj|d:\\full stack projects\\favmovie\\back-end\\model\\favmovie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA3B925D-73BC-4847-9CF6-52718017CC85}|back-end\\back-end.csproj|solutionrelative:back-end\\model\\favmovie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RegisterDTO.cs",
+              "DocumentMoniker": "D:\\FULL STACK PROJECTS\\FavMovie\\back-end\\DTOS\\RegisterDTO.cs",
+              "RelativeDocumentMoniker": "back-end\\DTOS\\RegisterDTO.cs",
+              "ToolTip": "D:\\FULL STACK PROJECTS\\FavMovie\\back-end\\DTOS\\RegisterDTO.cs",
+              "RelativeToolTip": "back-end\\DTOS\\RegisterDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T10:52:16.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "back-end",
+              "DocumentMoniker": "D:\\FULL STACK PROJECTS\\FavMovie\\back-end\\back-end.csproj",
+              "RelativeDocumentMoniker": "back-end\\back-end.csproj",
+              "ToolTip": "D:\\FULL STACK PROJECTS\\FavMovie\\back-end\\back-end.csproj",
+              "RelativeToolTip": "back-end\\back-end.csproj",
+              "ViewState": "AQIAABQAAAAAAAAAAAAYwCUAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-08T10:47:07.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MovieController.cs",
+              "DocumentMoniker": "D:\\FULL STACK PROJECTS\\FavMovie\\back-end\\Controller\\MovieController.cs",
+              "RelativeDocumentMoniker": "back-end\\Controller\\MovieController.cs",
+              "ToolTip": "D:\\FULL STACK PROJECTS\\FavMovie\\back-end\\Controller\\MovieController.cs",
+              "RelativeToolTip": "back-end\\Controller\\MovieController.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAQwD0AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T10:42:31.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\FULL STACK PROJECTS\\FavMovie\\back-end\\Controller\\AccountController.cs",
+              "RelativeDocumentMoniker": "back-end\\Controller\\AccountController.cs",
+              "ToolTip": "D:\\FULL STACK PROJECTS\\FavMovie\\back-end\\Controller\\AccountController.cs",
+              "RelativeToolTip": "back-end\\Controller\\AccountController.cs",
+              "ViewState": "AQIAAFsAAAAAAAAAAAAQwGkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T10:42:30.776Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AppUser.cs",
+              "DocumentMoniker": "D:\\FULL STACK PROJECTS\\FavMovie\\back-end\\Data\\AppUser.cs",
+              "RelativeDocumentMoniker": "back-end\\Data\\AppUser.cs",
+              "ToolTip": "D:\\FULL STACK PROJECTS\\FavMovie\\back-end\\Data\\AppUser.cs",
+              "RelativeToolTip": "back-end\\Data\\AppUser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T10:42:25.831Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FavMovie.cs",
+              "DocumentMoniker": "D:\\FULL STACK PROJECTS\\FavMovie\\back-end\\Model\\FavMovie.cs",
+              "RelativeDocumentMoniker": "back-end\\Model\\FavMovie.cs",
+              "ToolTip": "D:\\FULL STACK PROJECTS\\FavMovie\\back-end\\Model\\FavMovie.cs",
+              "RelativeToolTip": "back-end\\Model\\FavMovie.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T10:42:20.275Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\FULL STACK PROJECTS\\FavMovie\\back-end\\appsettings.json",
+              "RelativeDocumentMoniker": "back-end\\appsettings.json",
+              "ToolTip": "D:\\FULL STACK PROJECTS\\FavMovie\\back-end\\appsettings.json",
+              "RelativeToolTip": "back-end\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-08T10:42:19.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\FULL STACK PROJECTS\\FavMovie\\back-end\\Program.cs",
+              "RelativeDocumentMoniker": "back-end\\Program.cs",
+              "ToolTip": "D:\\FULL STACK PROJECTS\\FavMovie\\back-end\\Program.cs",
+              "RelativeToolTip": "back-end\\Program.cs",
+              "ViewState": "AQIAADUAAAAAAAAAAAAIwE4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T10:42:10.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FavMoviDTO.cs",
+              "DocumentMoniker": "D:\\FULL STACK PROJECTS\\FavMovie\\back-end\\DTOS\\FavMoviDTO.cs",
+              "RelativeDocumentMoniker": "back-end\\DTOS\\FavMoviDTO.cs",
+              "ToolTip": "D:\\FULL STACK PROJECTS\\FavMovie\\back-end\\DTOS\\FavMoviDTO.cs",
+              "RelativeToolTip": "back-end\\DTOS\\FavMoviDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T10:41:46.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\FULL STACK PROJECTS\\FavMovie\\back-end\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "back-end\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\FULL STACK PROJECTS\\FavMovie\\back-end\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "back-end\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvxUAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T10:42:25.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginDTO.cs",
+              "DocumentMoniker": "D:\\FULL STACK PROJECTS\\FavMovie\\back-end\\DTOS\\LoginDTO.cs",
+              "RelativeDocumentMoniker": "back-end\\DTOS\\LoginDTO.cs",
+              "ToolTip": "D:\\FULL STACK PROJECTS\\FavMovie\\back-end\\DTOS\\LoginDTO.cs",
+              "RelativeToolTip": "back-end\\DTOS\\LoginDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvxAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T10:57:39.326Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

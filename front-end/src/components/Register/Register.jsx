@@ -5,6 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function Register() {
+  const [userName, setUserName] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [Email, setEmail] = useState("");
@@ -17,6 +18,7 @@ function Register() {
   const RegisterSubmit = (event) => {
     event.preventDefault();
     const postData = {
+      userName: userName,
       firstName: firstName,
       lastName: lastName,
       email: Email,
@@ -95,6 +97,27 @@ function Register() {
                 className="block w-full appearance-none rounded-md border border-input bg-background px-3 py-2 placeholder-muted-foreground shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary sm:text-sm"
                 placeholder="Doe"
                 onChange={(e) => setLastName(e.target.value)}
+              />
+            </div>
+          </div>
+
+          <div>
+            <label
+              htmlFor="User Name"
+              className="block text-sm font-medium text-foreground"
+            >
+              User Name
+            </label>
+            <div className="mt-1">
+              <input
+                id="last"
+                name="name"
+                type="text"
+                autoComplete="name"
+                required
+                className="block w-full appearance-none rounded-md border border-input bg-background px-3 py-2 placeholder-muted-foreground shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary sm:text-sm"
+                placeholder="username"
+                onChange={(e) => setUserName(e.target.value)}
               />
             </div>
           </div>

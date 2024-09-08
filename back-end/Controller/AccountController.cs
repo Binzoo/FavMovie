@@ -5,6 +5,7 @@ using System.Text;
 using back_end.Data;
 using back_end.DTOS;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
@@ -30,35 +31,62 @@ namespace back_end.Controller
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterDTO model)
         {
-            if (model.Password != model.ConfirmPassword)
+            try
             {
-                return BadRequest("Password do not match");
-            }
-
-            var user = new AppUser
-            {
-                UserName = model.Email,
-                FirstName = model.FirstName,
-                LastName = model.LastName,
-                Description = model.DescribeYourSelf,
-                Email = model.Email,
-            };
-            var result = await _userManager.CreateAsync(user, model.Password);
-            if (result.Succeeded)
-            {
-                return Ok(new
+                if (!ModelState.IsValid)
                 {
-                    Username = user.UserName
-                });
+                    return BadRequest("Please input all reqired fields.");
+                }
+
+                if (model.Password != model.ConfirmPassword)
+                {
+                    return BadRequest("Password do not match");
+                }
+
+                var usernameExist = await _userManager.FindByNameAsync(model.UserName);
+
+                if (usernameExist != null)
+                {
+                    return BadRequest(new
+                    {
+                        message = "Username already exist."
+                    });
+                }
+
+                var user = new AppUser
+                {
+                    UserName = model.UserName,
+                    FirstName = model.FirstName,
+                    LastName = model.LastName,
+                    Description = model.DescribeYourSelf,
+                    Email = model.Email,
+                };
+                var result = await _userManager.CreateAsync(user, model.Password);
+                if (result.Succeeded)
+                {
+                    return Ok(new
+                    {
+                        Username = user.UserName
+                    });
+                }
+                return BadRequest(result.Errors);
             }
-            return BadRequest(result.Errors);
+            catch (Exception ex)
+            {
+                return BadRequest("Something went wrong.");
+            }
         }
 
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginDTO model)
         {
-            var user = await _userManager.FindByEmailAsync(model.Email);
 
+            if (!ModelState.IsValid)
+            {
+                return BadRequest("Please input all reqired fields.");
+            }
+
+            var user = await _userManager.FindByNameAsync(model.UserName);
             if (user == null)
             {
                 return BadRequest(new { message = "User not found" });
@@ -84,8 +112,8 @@ namespace back_end.Controller
             {
                 Subject = new ClaimsIdentity(new Claim[]
                 {
-            new Claim(ClaimTypes.NameIdentifier, user.Id),
-            new Claim(ClaimTypes.Email, user.Email)
+                    new Claim("nameid", user.Id),
+                    new Claim(ClaimTypes.Email, user.Email)
                 }),
                 Expires = DateTime.UtcNow.AddDays(7),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),

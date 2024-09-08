@@ -5,14 +5,14 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function Login() {
-  const [Email, setEmail] = useState("");
+  const [UserName, setUserName] = useState("");
   const [Password, setPassword] = useState("");
   const nav = useNavigate();
 
   const RegisterSubmit = (event) => {
     event.preventDefault();
     const postData = {
-      email: Email,
+      UserName: UserName,
       password: Password,
     };
 
@@ -45,18 +45,18 @@ function Login() {
               htmlFor="email"
               className="block text-sm font-medium text-foreground"
             >
-              Email address
+              UserName
             </label>
             <div className="mt-1">
               <input
-                id="email"
-                name="email"
-                type="email"
-                autoComplete="email"
+                id="username"
+                name="username"
+                type="text"
+                autoComplete="username"
                 required
                 className="block w-full appearance-none rounded-md border border-input bg-background px-3 py-2 placeholder-muted-foreground shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary sm:text-sm"
                 placeholder="you@example.com"
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => setUserName(e.target.value)}
               />
             </div>
           </div>

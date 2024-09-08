@@ -20,6 +20,14 @@ namespace back_end.Controller
             _applicationDbContext = applicationDbContext;
         }
 
+        [Authorize]
+        [HttpGet("test-claims")]
+        public IActionResult TestClaims()
+        {
+            var userId = User.FindFirst("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier")?.Value;
+            return Ok(new { UserId = userId, Claims = User.Claims.Select(c => new { c.Type, c.Value }) });
+        }
+
 
         [Authorize]
         [HttpPost]
@@ -29,7 +37,13 @@ namespace back_end.Controller
             {
                 return BadRequest(ModelState);
             }
-            var userId = User.FindFirst("nameid")?.Value;
+            var userId = User.FindFirst("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier")?.Value;
+
+            if(userId == null)
+            {
+                return Unauthorized("You are unauthorized to add movies.");
+            }
+
             FavMovie favMovie = new FavMovie
             {
                 Title = model.Title,
@@ -39,7 +53,6 @@ namespace back_end.Controller
                 MovieDescription = model.MovieDescription,
                 AppUserId = userId
             };
-
             await _applicationDbContext.FavMovie.AddAsync(favMovie);
             await _applicationDbContext.SaveChangesAsync();
             return Ok(new
