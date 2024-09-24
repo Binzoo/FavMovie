@@ -1,4 +1,13 @@
+import { useNavigate } from "react-router-dom";
+
 function Navbar() {
+  const token = localStorage.getItem("jwt");
+  const nav = useNavigate();
+  const handleLogout = () => {
+    // Remove JWT from localStorage and redirect to login page
+    localStorage.removeItem("jwt");
+    nav("/login");
+  };
   return (
     <>
       <header className="px-4 lg:px-6 h-14 flex items-center">
@@ -7,18 +16,54 @@ function Navbar() {
           <span className="text-2xl font-bold">MyMovieWorld</span>
         </a>
         <nav className="ml-auto flex gap-2 sm:gap-4 md:gap-6">
-          <a
-            href="#"
-            className="text-sm font-medium hover:underline underline-offset-4"
-          >
-            Discover
-          </a>
-          <a
-            href="/login"
-            className="text-sm font-medium hover:underline underline-offset-4"
-          >
-            Join
-          </a>
+          <td>
+            <a
+              href="/findfriend"
+              className="text-sm font-medium hover:underline underline-offset-4"
+            >
+              Find Friends
+            </a>
+          </td>
+          {token ? (
+            <>
+              <td>
+                <a
+                  href="/movielisting"
+                  className="text-sm font-medium hover:underline underline-offset-4"
+                >
+                  Your Movie Listing
+                </a>
+              </td>
+
+              <td>
+                <a
+                  href="/addmovie"
+                  className="text-sm font-medium hover:underline underline-offset-4"
+                >
+                  Add Movie
+                </a>
+              </td>
+
+              <td>
+                <a
+                  href="/login"
+                  onClick={handleLogout}
+                  className="text-sm font-medium hover:underline underline-offset-4"
+                >
+                  Logout
+                </a>
+              </td>
+            </>
+          ) : (
+            <td>
+              <a
+                href="/login"
+                className="text-sm font-medium hover:underline underline-offset-4"
+              >
+                Join
+              </a>
+            </td>
+          )}
         </nav>
       </header>
     </>

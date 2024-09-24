@@ -14,6 +14,7 @@ function Register() {
   const [ConfirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
   const nav = useNavigate();
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
   const RegisterSubmit = (event) => {
     event.preventDefault();
@@ -28,7 +29,7 @@ function Register() {
     };
 
     axios
-      .post("http://localhost:5119/api/Account/register", postData)
+      .post(`${API_BASE_URL}/api/Account/register`, postData)
       .then((response) => {
         toast.success("Registration successful!");
         setTimeout(() => nav("/login"), 2000);

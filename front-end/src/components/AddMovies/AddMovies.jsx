@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function AddMovies() {
@@ -9,10 +9,10 @@ function AddMovies() {
   const [movies, setMovies] = useState([]);
   const [userMovies, setUserMovies] = useState([]);
   const [expandedDescriptions, setExpandedDescriptions] = useState({});
-  const apiKey = "aa450ce071d85e19a759e05945e3b681";
+  const apiKey = import.meta.env.VITE_MOVIE_API_KEY;
   const token = localStorage.getItem("jwt");
   const nav = useNavigate();
-
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
   const handleSearch = async () => {
     try {
       const response = await fetch(
@@ -27,8 +27,6 @@ function AddMovies() {
 
   const handleAddToList = (movie) => {
     setUserMovies([...userMovies, movie]);
-    console.log(movie);
-
     const postData = {
       title: movie.title,
       releaseDate: movie.release_date,
@@ -38,7 +36,7 @@ function AddMovies() {
     };
 
     axios
-      .post("http://localhost:5119/api/Movie", postData, {
+      .post(`${API_BASE_URL}/api/Movie`, postData, {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "application/json",
@@ -85,11 +83,11 @@ function AddMovies() {
             placeholder="Search for a movie"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-blue-500"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-[#ff6b6b] "
           />
           <button
             onClick={handleSearch}
-            className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition duration-200"
+            className="bg-[#ff6b6b]  text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition duration-200"
           >
             Search
           </button>
@@ -145,6 +143,7 @@ function AddMovies() {
           ))}
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 }

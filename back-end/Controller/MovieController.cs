@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 using System.Threading.Tasks;
 using back_end.Data;
@@ -7,6 +8,7 @@ using back_end.DTOS;
 using back_end.Model;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace back_end.Controller
 {
@@ -21,15 +23,6 @@ namespace back_end.Controller
         }
 
         [Authorize]
-        [HttpGet("test-claims")]
-        public IActionResult TestClaims()
-        {
-            var userId = User.FindFirst("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier")?.Value;
-            return Ok(new { UserId = userId, Claims = User.Claims.Select(c => new { c.Type, c.Value }) });
-        }
-
-
-        [Authorize]
         [HttpPost]
         public async Task<IActionResult> CreateFavMovie([FromBody] FavMoviDTO model)
         {
@@ -39,11 +32,10 @@ namespace back_end.Controller
             }
             var userId = User.FindFirst("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier")?.Value;
 
-            if(userId == null)
+            if (userId == null)
             {
                 return Unauthorized("You are unauthorized to add movies.");
             }
-
             FavMovie favMovie = new FavMovie
             {
                 Title = model.Title,
@@ -61,5 +53,48 @@ namespace back_end.Controller
             });
         }
 
+        [Authorize]
+        [HttpDelete]
+        public async Task<IActionResult> DeleteMovie(int id)
+        {
+            var userId = User.FindFirst("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier")?.Value;
+            if (userId == null)
+            {
+                return Unauthorized("You are unauthorized to add movies.");
+            }
+            var movie = await _applicationDbContext.FavMovie.Where(e => e.Id == id).FirstOrDefaultAsync();
+            if (movie == null)
+            {
+                return BadRequest("Movie not found.");
+            }
+
+            _applicationDbContext.FavMovie.Remove(movie);
+            await _applicationDbContext.SaveChangesAsync();
+
+            return Ok("Movie Removed Successfully.");
+        }
+
+        [Authorize]
+        [HttpGet]
+        public async Task<IActionResult> GetMovie()
+        {
+            var userId = User.FindFirst("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier")?.Value;
+            var movies = await _applicationDbContext.FavMovie.Where(e => e.AppUserId == userId).ToListAsync();
+            return Ok(movies);
+        }
+
+        [HttpGet("featured-movies")]
+        public async Task<ActionResult> GetTop5EntitiesAsync()
+        {
+            var featuredMovie = await _applicationDbContext.FavMovie.OrderBy(e => e.Id).Take(4).Select(e => new FeatureMovieDTO
+            {
+                Title = e.Title,
+                MovieImage = e.MovieImage,
+                ReleaseDate = e.ReleaseDate,
+                Rating = e.MovieRating
+            }).ToListAsync();
+
+            return Ok(featuredMovie);
+        }
     }
 }

@@ -1,28 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FULL STACK PROJECTS\\FavMovie\\back-end\\back-end.csproj": {}
+    "/Users/binamrathapa/Desktop/Projects/FAVMOVIE/back-end/back-end.csproj": {}
   },
   "projects": {
-    "D:\\FULL STACK PROJECTS\\FavMovie\\back-end\\back-end.csproj": {
+    "/Users/binamrathapa/Desktop/Projects/FAVMOVIE/back-end/back-end.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FULL STACK PROJECTS\\FavMovie\\back-end\\back-end.csproj",
+        "projectUniqueName": "/Users/binamrathapa/Desktop/Projects/FAVMOVIE/back-end/back-end.csproj",
         "projectName": "back-end",
-        "projectPath": "D:\\FULL STACK PROJECTS\\FavMovie\\back-end\\back-end.csproj",
-        "packagesPath": "C:\\Users\\binam\\.nuget\\packages\\",
-        "outputPath": "D:\\FULL STACK PROJECTS\\FavMovie\\back-end\\obj\\",
+        "projectPath": "/Users/binamrathapa/Desktop/Projects/FAVMOVIE/back-end/back-end.csproj",
+        "packagesPath": "/Users/binamrathapa/.nuget/packages/",
+        "outputPath": "/Users/binamrathapa/Desktop/Projects/FAVMOVIE/back-end/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\binam\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/binamrathapa/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -102,7 +99,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

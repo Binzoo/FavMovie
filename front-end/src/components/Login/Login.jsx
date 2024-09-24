@@ -8,6 +8,7 @@ function Login() {
   const [UserName, setUserName] = useState("");
   const [Password, setPassword] = useState("");
   const nav = useNavigate();
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
   const RegisterSubmit = (event) => {
     event.preventDefault();
@@ -17,7 +18,7 @@ function Login() {
     };
 
     axios
-      .post("http://localhost:5119/api/Account/login", postData)
+      .post(`${API_BASE_URL}/api/Account/login`, postData)
       .then((response) => {
         const { token } = response.data;
         localStorage.setItem("jwt", token);
