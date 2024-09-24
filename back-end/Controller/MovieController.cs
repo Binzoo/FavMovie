@@ -36,6 +36,15 @@ namespace back_end.Controller
             {
                 return Unauthorized("You are unauthorized to add movies.");
             }
+
+            var movies = await _applicationDbContext.FavMovie.Where(e => e.AppUserId == userId).ToListAsync();
+
+            if (movies.Count >= 10)
+            {
+                return BadRequest("You have added your top 10 movies.");
+            }
+
+
             FavMovie favMovie = new FavMovie
             {
                 Title = model.Title,

@@ -30,9 +30,9 @@ function AddMovies() {
     const postData = {
       title: movie.title,
       releaseDate: movie.release_date,
-      movieRating: movie.vote_average.toString(), // Ensuring it's a string
+      movieRating: movie.vote_average.toString(),
       movieDescription: movie.overview,
-      movieImage: `https://image.tmdb.org/t/p/w500${movie.poster_path}`, // Full URL for the image
+      movieImage: `https://image.tmdb.org/t/p/w500${movie.poster_path}`,
     };
 
     axios
@@ -52,6 +52,7 @@ function AddMovies() {
           "Error saving movie:",
           error.response?.data || error.message
         );
+        toast.error("You have added your top 10 movies!");
       });
   };
 

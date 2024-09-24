@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function MovieList() {
@@ -10,6 +10,14 @@ export default function MovieList() {
   const [error, setError] = useState(null);
   const token = localStorage.getItem("jwt");
   const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+  const textRef = useRef(null);
+  const domain = window.location.origin;
+
+  const copyToClipboard = () => {
+    const text = textRef.current;
+    text.select();
+    document.execCommand("copy");
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -98,9 +106,26 @@ export default function MovieList() {
                   Add Movie
                 </a>
               </div>
+              <div>
+                <input
+                  className="mt-10 h-18"
+                  type="text"
+                  value={`${domain}/user/${data.username}`}
+                  ref={textRef}
+                  readOnly
+                  size={25}
+                />
+                <button
+                  onClick={copyToClipboard}
+                  className="inline-flex h-10 mt-2 items-center justify-center rounded-md bg-[#42ae33] px-8 text-sm font-medium text-white shadow transition-colors hover:bg-[#4dff50] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                >
+                  Copy Link and Share
+                </button>
+              </div>
             </div>
           )}
         </div>
+
         <div>
           <h2 className="text-2xl font-bold mb-4">My Favorite top 10 Movies</h2>
           <div className="grid gap-4">
